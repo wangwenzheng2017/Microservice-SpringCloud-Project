@@ -8,7 +8,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<modules>
+	<modules> 
 		<module>microservice-consumer-movie</module>
 		<module>microservice-provider-user</module>
 		<module>microservice-discovery-eureka</module>
