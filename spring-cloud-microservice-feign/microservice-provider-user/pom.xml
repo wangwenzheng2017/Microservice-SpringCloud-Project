@@ -10,8 +10,8 @@
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
-		<groupId>com.itmuch.cloud</groupId>
-		<artifactId>microservice-spring-cloud</artifactId>
+		<groupId>com.mark.cloud</groupId>
+		<artifactId>microservice-spring-cloud-feign</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 

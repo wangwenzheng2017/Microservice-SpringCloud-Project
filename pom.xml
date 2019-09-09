@@ -2,16 +2,14 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+
 	<groupId>com.mark.cloud</groupId>
-	<artifactId>microservice-spring-cloud-feign</artifactId>
+	<artifactId>microservice-spring-cloud</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<modules> 
-		<module>microservice-consumer-movie</module>
-		<module>microservice-provider-user</module>
-		<module>microservice-discovery-eureka</module>
-		<module>microservice-consumer-feign-movie</module>
+		<module>microservice-spring-cloud-feign</module>
 	</modules>
 	
 	<properties>
@@ -21,9 +19,9 @@
 	</properties>
 
 	<parent>
-		<groupId>com.mark.cloud</groupId>
-		<artifactId>microservice-spring-cloud</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.2.RELEASE</version>
 	</parent>
 	<dependencyManagement>
 		<dependencies>
