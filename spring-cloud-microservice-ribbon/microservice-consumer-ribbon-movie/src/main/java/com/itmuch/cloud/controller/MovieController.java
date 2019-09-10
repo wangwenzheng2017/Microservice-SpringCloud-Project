@@ -13,30 +13,28 @@ import com.itmuch.cloud.feign.UserClientSelf;
 
 @RestController
 public class MovieController {
-  @Autowired
-  private RestTemplate restTemplate;
+	@Autowired
+	private RestTemplate restTemplate;
 
-  @Value("${user.userServicePath}")
-  private String userServicePath;
-  
 	/*
 	 * @Autowired private UserClient userClient;
 	 */
-  @Autowired
-  private UserClientSelf userClientSelf;
+	@Autowired
+	private UserClientSelf userClientSelf;
+
+	@GetMapping("/movie/{id}")
+	public User findById(@PathVariable Long id) {
+		return this.restTemplate.getForObject("http://microservice-provider-user/simple/" + id, User.class);
+	}
 
 	/*
-	 * @GetMapping("/movie/{id}") public User findById(@PathVariable Long id) {
-	 * return this.restTemplate.getForObject(this.userServicePath + id, User.class);
-	 * }
-	 */
-  
-	/* 11
+	 * 11
+	 * 
 	 * @GetMapping("/movie/{id}") public User findById(@PathVariable Long id) {
 	 * return this.userClient.findById(id); }
 	 */
-  @GetMapping("/movie/{id}")
-  public User findById(@PathVariable Long id) {
-	  return this.userClientSelf.findById(id);
-  }
+	/*
+	 * @GetMapping("/movie/{id}") public User findById(@PathVariable Long id) {
+	 * return this.userClientSelf.findById(id); }
+	 */
 }

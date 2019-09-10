@@ -1,10 +1,8 @@
 spring:
   application:
-    name: microservice-consumer-feign-movie
+    name: microservice-consumer-ribbon-movie
 server:
-  port: 7901
-user: 
-  userServicePath: http://localhost:7900/simple/
+  port: 8010
 eureka:
   client:
     healthcheck:
