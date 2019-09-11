@@ -3,6 +3,8 @@ package com.itmuch.cloud.controller;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
@@ -31,7 +33,8 @@ public class UserController {
   private DiscoveryClient discoveryClient;
 
   @GetMapping("/simple/{id}")
-  public User findById(@PathVariable Long id) {
+  public User findById(@PathVariable Long id,HttpServletRequest request) {
+	System.out.println("this is port ---"+request.getLocalPort()+"---");
     return this.userRepository.findOne(id);
   }
 
