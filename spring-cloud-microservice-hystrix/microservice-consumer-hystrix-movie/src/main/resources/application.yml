@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: microservice-consumer-ribbon-movie
+server:
+  port: 8010
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    prefer-ip-address: true
