@@ -11,6 +11,7 @@
 	<modules> 
 		<module>microservice-spring-cloud-feign</module>
 		<module>microservice-spring-cloud-ribbon</module>
+		<module>microservice-spring-cloud-hystrix</module>
 	</modules>
 	
 	<properties>

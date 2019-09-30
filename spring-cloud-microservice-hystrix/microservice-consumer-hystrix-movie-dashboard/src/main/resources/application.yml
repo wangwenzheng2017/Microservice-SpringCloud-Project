@@ -1,12 +1,12 @@
 spring:
   application:
-    name: microservice-consumer-hystrix-movie
+    name: microservice-consumer-hystrix-dashboard
 server:
-  port: 8010
+  port: 2001
 eureka:
   client:
     healthcheck:
-      enabled: true
+      enabled: trueh
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
   instance:

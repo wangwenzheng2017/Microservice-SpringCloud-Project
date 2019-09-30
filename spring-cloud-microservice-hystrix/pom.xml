@@ -11,6 +11,8 @@
 		<module>microservice-consumer-hystrix-movie</module>
 		<module>microservice-discovery-hystrix-eureka</module>
 		<module>microservice-consumer-hystrix-user</module>
+		<module>microservice-consumer-hystrix-movie-dashboard</module>
+		<module>microservice-consumer-hystrix-dashboard-turbine</module>
 	</modules>
 	
 	<properties>

@@ -2,6 +2,7 @@ package com.itmuch.cloud.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -35,6 +36,16 @@ public class UserController {
   @GetMapping("/simple/{id}")
   public User findById(@PathVariable Long id,HttpServletRequest request) {
 	System.out.println("this is port ---"+request.getLocalPort()+"---");
+	//test hystrix outtime
+	Long start = System.currentTimeMillis();
+	int time = new Random().nextInt(3000);
+	try {
+		Thread.sleep((long)time);
+	} catch (InterruptedException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	System.out.println("consume time is "+(System.currentTimeMillis()-start));
     return this.userRepository.findOne(id);
   }
 
