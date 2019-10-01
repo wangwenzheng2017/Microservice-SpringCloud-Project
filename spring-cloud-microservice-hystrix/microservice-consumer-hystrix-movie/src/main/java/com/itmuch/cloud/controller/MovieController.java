@@ -19,6 +19,12 @@ public class MovieController {
 	public User findById(@PathVariable Long id) {
 		return this.restTemplate.getForObject("http://microservice-provider-user/simple/" + id, User.class);
 	}
+	
+	@GetMapping("/movie2/{id}")
+	@HystrixCommand(fallbackMethod = "fallback")
+	public User findById2(@PathVariable Long id) {
+		return this.restTemplate.getForObject("http://microservice-provider-user2/simple/" + id, User.class);
+	}
 
 	public User fallback(Long id) {
 		User user = new User();

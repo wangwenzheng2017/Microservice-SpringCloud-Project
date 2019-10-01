@@ -12,7 +12,8 @@ eureka:
   instance:
     prefer-ip-address: true
 turbine:
-  aggregator:
-    clusterConfig: MICROSERVICE-CONCUMER-HYSTRIX-MOVIE,MICROSERVICE-CONCUMER-HYSTRIX-DASHBOARD
-  app-config: microservice-consumer-hystrix-movie,microservice-consumer-hystrix-dashboard
-#  clusterNameExpression: "'default'"
+#  aggregator:
+#    clusterConfig: MICROSERVICE-CONCUMER-HYSTRIX-MOVIE,MICROSERVICE-CONCUMER-HYSTRIX-DASHBOARD
+  appConfig: microservice-consumer-hystrix-movie,microservice-consumer-hystrix-movie2
+  clusterNameExpression: "'default'"
+  combine-host-port: true

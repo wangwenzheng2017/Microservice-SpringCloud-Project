@@ -2,17 +2,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-
 	<groupId>com.mark.cloud</groupId>
-	<artifactId>microservice-spring-cloud</artifactId>
+	<artifactId>microservice-spring-cloud-zuul</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<modules> 
-		<module>microservice-spring-cloud-feign</module>
-		<module>microservice-spring-cloud-ribbon</module>
-		<module>microservice-spring-cloud-hystrix</module>
-		<module>microservice-spring-cloud-zuul</module>
+		<module>microservice-provider-zuul-user</module>
+		<module>microservice-discovery-zuul-eureka</module>
+		<module>microservice-consumer-zuul-movie</module>
 	</modules>
 	
 	<properties>
@@ -22,9 +20,9 @@
 	</properties>
 
 	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.2.RELEASE</version>
+		<groupId>com.mark.cloud</groupId>
+		<artifactId>microservice-spring-cloud</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<dependencyManagement>
 		<dependencies>
