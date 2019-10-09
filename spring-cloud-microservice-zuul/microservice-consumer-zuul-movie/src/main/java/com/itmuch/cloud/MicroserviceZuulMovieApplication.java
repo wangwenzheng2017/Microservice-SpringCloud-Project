@@ -10,7 +10,7 @@ import org.springframework.web.client.RestTemplate;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableFeignClients
-public class MicroserviceSimpleConsumerFeignMovieApplication {
+public class MicroserviceZuulMovieApplication {
 
   @Bean
   public RestTemplate restTemplate() {
@@ -18,6 +18,6 @@ public class MicroserviceSimpleConsumerFeignMovieApplication {
   }
 
   public static void main(String[] args) {
-    SpringApplication.run(MicroserviceSimpleConsumerFeignMovieApplication.class, args);
+    SpringApplication.run(MicroserviceZuulMovieApplication.class, args);
   }
 }
