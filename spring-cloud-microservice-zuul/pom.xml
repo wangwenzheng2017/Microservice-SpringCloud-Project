@@ -11,6 +11,7 @@
 		<module>microservice-provider-zuul-user</module>
 		<module>microservice-discovery-zuul-eureka</module>
 		<module>microservice-consumer-zuul-movie</module>
+		<module>microservice-consumer-zuul-gateway</module>
 	</modules>
 	
 	<properties>
